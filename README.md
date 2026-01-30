@@ -1,16 +1,68 @@
-# React + Vite
+@"
+# Sistema de Cadastro Full Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste em um sistema de gestão de usuários composto por uma aplicação frontend desenvolvida em React e um servidor backend construído com Node.js e Prisma ORM, utilizando PostgreSQL como banco de dados.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
+* React
+* Vite
+* CSS3
 
-## React Compiler
+### Backend
+* Node.js
+* Express
+* Prisma ORM
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Banco de Dados
+* PostgreSQL
 
-## Expanding the ESLint configuration
+## Configuração do Ambiente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Requisitos Prévios
+* Node.js instalado
+* PostgreSQL em execução
+
+### Instalação do Backend
+
+1. Navegue até a pasta do servidor:
+   cd server
+
+2. Instale as dependências:
+   npm install
+
+3. Configure o arquivo .env na raiz da pasta server com a sua string de conexão:
+   DATABASE_URL="postgresql://usuario:senha@localhost:5432/nome_do_banco?schema=public"
+
+4. Execute as migrações do Prisma:
+   npx prisma generate
+
+5. Inicie o servidor:
+   npm run dev
+
+### Instalação do Frontend
+
+1. Retorne à raiz do projeto e instale as dependências:
+   npm install
+
+2. Inicie a aplicação:
+   npm run dev
+
+## Estrutura de Pastas
+
+* server/: Contém toda a lógica do backend, configurações do Prisma e conexão com o banco de dados.
+* src/: Contém os componentes React, arquivos de estilo e lógica do frontend.
+* server/prisma/: Contém o esquema do banco de dados.
+
+## Funcionalidades
+
+* Cadastro de usuários com validação de campos.
+* Armazenamento persistente em banco de dados relacional.
+* Integração via API REST utilizando JSON.
+"@ | Out-File -FilePath README.md -Encoding utf8
+
+# Adiciona o novo arquivo ao Git, faz o commit e envia para o GitHub
+git add README.md
+git commit -m "Adicionando documentacao README"
+git push origin main
