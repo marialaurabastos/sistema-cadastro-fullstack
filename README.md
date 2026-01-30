@@ -60,9 +60,3 @@ Este projeto consiste em um sistema de gestão de usuários composto por uma apl
 * Cadastro de usuários com validação de campos.
 * Armazenamento persistente em banco de dados relacional.
 * Integração via API REST utilizando JSON.
-"@ | Out-File -FilePath README.md -Encoding utf8
-
-# Adiciona o novo arquivo ao Git, faz o commit e envia para o GitHub
-git add README.md
-git commit -m "Adicionando documentacao README"
-git push origin main
