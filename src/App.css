@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    overflow: hidden;
+}
+
+.pagina {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0A192F;
+    height: 100vh;
+    width: 100vw;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container1 {
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    width: 80%;
+    min-width: 900px;
+    min-height: 600px;
+    border-radius: 20px;
+    background-color: #FF2498;
+}
+
+.container2 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-width: 100px;
+    min-height: 570px;
+    border-radius: 20px;
+    background-color: #0A192F;
+}
+
+.esquerda {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.imagem-esquerda img {
+    width: 500px;
+    max-width: 100%;
+    height: 480px;
+    margin-left: 10px;
+    border-radius: 20px;
+}
+
+.direita {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin-left: 20px;
+}
+
+h1 {
+    font-family: "Spicy Rice", serif;
+    font-weight: 300;
+    font-style: normal;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #00D4FF
+}
+
+p {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: bold;
+    margin-bottom: 10px;
+    color: #00D4FF
+}
+
+.formulario {
+    font-family: "Space Mono", monospace;
+    font-weight: 400;
+    font-style: bold;
+    margin-bottom: 30px;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #00D4FF
+}
+
+.campo input {
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    padding-left: 15px;
+    background-color: transparent;
+    border-color: #00D4FF;
+}
+
+.aceito-btn {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin-top: 15px;
+    color: #00D4FF
+}
+
+.aceito-btn input {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #00D4FF;
+    border-radius: 5px;
+    background-color: transparent;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.aceito-btn input:checked {
+    background-color: #FF2498;
+}
+
+.cadastre-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.cadastre-btn button {
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    background-color: transparent;
+    font-family: "Space Mono", monospace;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: bold;
+    background-color: #FF2498;
+    border: none;
+}
+
+@media (max-width: 1024px) {
+    .container1 {
+        min-width: 95%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .conteudo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .esquerda .direita {
+        width: 100%;
+        height: auto;
+        max-width: 400px;
+        display: block;
+        margin: 8 auto;
+    }
+
+    .campo input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .cadastre-btn {
+        width:100%;
+    }
+}
