@@ -1,4 +1,3 @@
-@"
 # Sistema de Cadastro Full Stack
 
 Este projeto consiste em um sistema de gestão de usuários composto por uma aplicação frontend desenvolvida em React e um servidor backend construído com Node.js e Prisma ORM, utilizando PostgreSQL como banco de dados.
