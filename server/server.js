@@ -20,6 +20,9 @@ app.use(cors()) //configura o servidor para aceitar requisições do front-end
 
 //rota de criação de usuário (métopdo POST)
 app.post('/usuarios', async (req, res) => {
+
+    //loga no console os dados recebidos para verificação
+    console.log('Recebido pedido de criação de usuário:', req.body);
     try { //tenta criar o usuário no banco de dados usando o Prisma
         await prisma.user.create({
             data: {
@@ -40,14 +43,14 @@ app.post('/usuarios', async (req, res) => {
                 message: 'O email ou usário informado já está cadastrado.'
             });
         }
+        
+        //qualquer outro erro (ex banco offline), retorna erro 500 (interno do servidor)
+        res.status(500).json({
+            error: 'Erro interno do servidor',
+            message: 'Não foi possível completar o cadastro agora. Tente novamente mais tarde.'
+        });
     }
-
-    //qualquer outro erro (ex banco offline), retorna erro 500 (interno do servidor)
-    res.status(500).json({
-        error: 'Erro interno do servidor',
-        message: 'Não foi possível completar o cadastro agora. Tente novamente mais tarde.'
-    });
-})
+});
 
 //inicialização do servidor na porta 3000
 app.listen(3000, () => console.log('Servidor rodando na porta 3000 '))
