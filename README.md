@@ -1,16 +1,24 @@
-# React + Vite
+# Sistema de Cadastro Full Stack
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto consiste em um sistema de gestão de usuários composto por uma aplicação frontend desenvolvida em React e um servidor backend construído com Node.js e Prisma ORM, utilizando PostgreSQL como banco de dados.
 
-Currently, two official plugins are available:
+## Tecnologias Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Frontend
+* React
+* Vite
+* CSS3
 
-## React Compiler
+### Backend
+* Node.js
+* Express
+* Prisma ORM
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Banco de Dados
+* PostgreSQL
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Cadastro de usuários com validação de campos.
+* Armazenamento persistente em banco de dados relacional.
+* Integração via API REST utilizando JSON.
