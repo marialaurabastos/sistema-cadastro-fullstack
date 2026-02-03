@@ -158,6 +158,12 @@ fieldset {
     font-style: bold;
     background-color: #FF2498;
     border: none;
+    transition: transform 0.2s ease-in-out;
+}
+
+.cadastre-btn button:hover {
+    transform: scale(1.05);
+    cursor: pointer;
 }
 
 @media (max-width: 1024px) {

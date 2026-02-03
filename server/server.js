@@ -5,13 +5,8 @@ import pkg from '@prisma/client' //importa o pacote do prisma
 
 const { PrismaClient } = pkg; //extrai o PrismaClient do pacote
 
-//configuração do prisma com o banco de dados
-const prisma = new PrismaClient({
-    datasourceUrl: "postgresql://postgres:yetTUTact.1@localhost:5432/cadastro?schema=public", //string de conexão com o banco de dados
-    __internal: {
-        debug: false //desativa o modo debug
-    }
-})
+//configuração do prisma para conectar ao banco de dados
+const prisma = new PrismaClient();
 
 //inicialização do servidor (express)
 const app = express()
@@ -44,8 +39,8 @@ app.post('/usuarios', async (req, res) => {
             });
         }
         
-        //qualquer outro erro (ex banco offline), retorna erro 500 (interno do servidor)
-        res.status(500).json({
+        //para outros erros, envia status 500 (erro interno) com mensagem genérica
+        return res.status(500).json({ 
             error: 'Erro interno do servidor',
             message: 'Não foi possível completar o cadastro agora. Tente novamente mais tarde.'
         });
