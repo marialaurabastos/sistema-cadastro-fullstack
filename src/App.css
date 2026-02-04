@@ -5,16 +5,12 @@
     outline: none;
 }
 
-body {
-    overflow: hidden;
-}
-
 .pagina {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #0A192F;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
 }
 
